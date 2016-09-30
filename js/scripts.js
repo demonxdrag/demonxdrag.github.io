@@ -4,4 +4,6 @@ $(document).ready(function(){
     .velocity({color:"#414141"}, {duration: 1000})
     .velocity({color:"#fafafa"}, {duration: 1000, delay:400})
     .velocity({boxShadowBlur:0, boxShadowY:0, opacity:0}, {duration: 500, delay: 200});
+  $('#menu_holder')
+    .velocity({boxShadowBlur:30, color:"#414141"},{duration: 1000, delay: 4300, easing: [ .42, 0, .58, 1 ]});
 });

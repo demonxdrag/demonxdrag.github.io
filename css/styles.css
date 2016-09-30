@@ -1,7 +1,10 @@
 body{
   background-color: #fafafa;
 }
+
 #home_circle {
+
+  z-index: 2;
 
   width: 350px;
   height: 350px;
@@ -13,9 +16,24 @@ body{
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: #fafafa;
   font-size: 40px;
-  overflow: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+}
+
+#menu_holder{
+
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+  width 100%;
+  padding: 20px;
+  color: #fafafa;
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 30px;
+
+}
+
+#menu_holder div {
 
 }
