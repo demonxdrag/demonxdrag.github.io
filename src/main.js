@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Extension from './components/Extension.jsx';
+import Papp from './components/Pappw.jsx';
 
 function panel(){
 	ReactDOM.render(
-		<Extension/>,
+		<Papp/>,
 		document.getElementById('container')
 	);
 }
