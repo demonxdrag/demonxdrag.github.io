@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+class Circle extends React.Component {
+	componentDidMount(){
+		setTimeout(() => this.props.setState({circle:false}), 15000);
+	}
+	render(){
+		let circle = <div id="home_circle">Adrian<br/>Pappalardo</div>;
+		return circle;
+	}
+}
 
 class Init extends React.Component {
 	render() {
-		let circle = <div id="home_circle">Adrian<br/>Pappalardo</div>;
 		let transitionCircle = <ReactCSSTransitionGroup
           transitionName="circle"
           transitionEnterTimeout={500}
@@ -12,7 +20,7 @@ class Init extends React.Component {
 
 					transitionAppear={true}
 					transitionAppearTimeout={500}>
-					{circle}
+					<Circle/>
     </ReactCSSTransitionGroup>;
 
 		return transitionCircle;
