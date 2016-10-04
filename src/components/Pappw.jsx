@@ -11,8 +11,12 @@ class Papp extends React.Component {
 		this.setState(store);
 	}
 	showThing(newState){
-		let state = Object.assign(this.state, newState);
-		this.setState(state);
+		let mergedState = Object.assign(this.state, newState);
+		this.setState(mergedState);
+	}
+	componentDidMount(){
+		document.querySelectorAll('#home_circle');
+		setTimeout(() => this.showThing({circle:false}), 1500);
 	}
 	render() {
 		if(this.state.circle){

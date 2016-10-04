@@ -14,7 +14,8 @@ body{
 
   text-align: center;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  color: #fafafa;
+  /*color: #fafafa;*/
+	background-color: #444;
   font-size: 40px;
   display: flex;
   justify-content: center;
@@ -36,4 +37,22 @@ body{
 
 #menu_holder div {
 
+}
+
+.circle-enter {
+  opacity: 0.01;
+}
+
+.circle-enter.circle-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.circle-leave {
+  opacity: 1;
+}
+
+.circle-leave.circle-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
