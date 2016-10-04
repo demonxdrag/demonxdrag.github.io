@@ -1,5 +1,6 @@
 import React from 'react';
 import Bar from './Bar';
+import Init from './Init';
 
 class Papp extends React.Component {
 	constructor(props){
@@ -14,18 +15,13 @@ class Papp extends React.Component {
 		this.setState(state);
 	}
 	render() {
-		let asdf;
 		if(this.state.circle){
-			asdf =  <div id='home_circle' onClick={() => this.showThing()}></div>;
+			return <Init></Init>;
 		}
 
-		let a = <div>
-			{asdf}
-			<Bar headerText='Potato1' yes={true}></Bar>;
-			<Bar headerText={1} yes={true}></Bar>;
-			<Bar headerText={3} yes={true}></Bar>;
-		</div>;
-		return a;
+		if(this.state.bar){
+			return	<Bar></Bar>;
+		}
 	}
 }
 
