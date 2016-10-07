@@ -14,8 +14,8 @@ body{
 
   text-align: center;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  /*color: #fafafa;*/
-	background-color: #444;
+  color: #fafafa;
+	background-color: #fafafa;
   font-size: 40px;
   display: flex;
   justify-content: center;
@@ -35,16 +35,12 @@ body{
 
 }
 
-#menu_holder div {
-
-}
-
 .circle-enter {
-  opacity: 0.01;
+  opacity: 1;
 }
 
 .circle-enter.circle-enter-active {
-  opacity: 1;
+  opacity: 0;
   transition: opacity 500ms ease-in;
 }
 
