@@ -16,11 +16,11 @@ class Papp extends React.Component {
 	}
 	render() {
 		if(this.state.circle){
-			return <Init></Init>;
+			return <Init setState={() => this.setStore.bind(this)}/>;
 		}
 
 		if(this.state.bar){
-			return	<Bar></Bar>;
+			return	<Bar/>;
 		}
 	}
 }
