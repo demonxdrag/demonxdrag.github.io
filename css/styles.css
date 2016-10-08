@@ -2,25 +2,85 @@ body{
   background-color: #fafafa;
 }
 
-#home_circle {
+@-webkit-keyframes animationCircle {
+  from, 10%, to {
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+  }
 
-  z-index: 2;
+  70% {
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.4);
+    opacity: 1;
+  }
+}
+
+@keyframes animationCircle {
+  from, 10%, to {
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+  }
+
+  70% {
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.4);
+    opacity: 1;
+  }
+}
+
+#home_circle {
 
   width: 350px;
   height: 350px;
-  margin: 0 auto;
   border-radius: 100%;
-  box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -175px 0 0 -175px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+
+  -webkit-animation-name: animationCircle;
+  animation-name: animationCircle;
+
+  -webkit-animation-timing-function: cubic-bezier(0.300, 0.610, 0.355, 1.000);
+  animation-timing-function: cubic-bezier(0.300, 0.610, 0.355, 1.000);
+
+}
+
+#home_circle p{
 
   text-align: center;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  color: #fafafa;
-	background-color: #fafafa;
   font-size: 40px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  color: #414141;
 
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+
+}
+
+@-webkit-keyframes hue {
+  0% {
+      -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+      -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
+@keyframes hue {
+  0% {
+      -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+      -webkit-filter: hue-rotate(-360deg);
+  }
 }
 
 #menu_holder{
@@ -33,22 +93,9 @@ body{
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 30px;
 
-}
+  -webkit-animation: hue 60s infinite linear;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-.circle-enter {
-  opacity: 1;
-}
-
-.circle-enter.circle-enter-active {
-  opacity: 0;
-  transition: opacity 500ms ease-in;
-}
-
-.circle-leave {
-  opacity: 1;
-}
-
-.circle-leave.circle-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
 }

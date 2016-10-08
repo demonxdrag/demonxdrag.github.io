@@ -1,32 +1,14 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Init extends React.Component {
 	render() {
-		let circle = <div id="home_circle" key="one">Adrian<br/>Pappalardo</div>;
-		let params = {
-			transitionName: "circle",
-			transitionEnter: true,
-			transitionEnterTimeout: 500,
-			transitionLeave: true,
-			transitionLeaveTimeout: 300,
-			transitionAppear: false,
-			transitionAppearTimeout: 300
-		};
-		return (<ReactCSSTransitionGroup {...params}>
-			{circle}
-			</ReactCSSTransitionGroup>);
-		//return <div id='home_circle' onClick={() => this.showThing()}></div>;
+		return <div id="home_circle"><p>Adrian<br/>Pappalardo</p></div>;
 	}
 	componentDidMount(){
-		/*
-		console.log(<ReactCSSTransitionGroup {...this.params}>
-			{this.circle}
-			</ReactCSSTransitionGroup>);
-		/*
-		document.querySelectorAll('#home_circle');
-		setTimeout(() => this.showThing({circle:false, bar:true}), 1500);
-		*/
+		let animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		let circle = document.querySelectorAll('#home_circle')[0];
+		circle.childNodes[0].className = "animated fadeIn";
+		//setTimeout(() => this.showThing({circle:false, bar:true}), 1500);
 	}
 }
 

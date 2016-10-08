@@ -5,7 +5,7 @@ import Init from './Init';
 class Papp extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {showWorkWindow: false, circle: true, bar: false};
+		this.state = {circle: true, bar: false};
 	}
 	setStore(store){
 		this.setState(store);
@@ -16,7 +16,7 @@ class Papp extends React.Component {
 	}
 	render() {
 		if(this.state.circle){
-			return <Init setState={() => this.setStore.bind(this)}/>;
+			return <Init/>;
 		}
 
 		if(this.state.bar){
