@@ -1,25 +1,29 @@
+/**{
+  border: 1px solid red;
+}*/
+
 body{
   background-color: #fafafa;
 }
 
-@-webkit-keyframes animationCircle {
+@-webkit-keyframes shadowSpawn {
   from, 10%, to {
     box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
   }
 
   70% {
-    box-shadow: 0px 20px 50px rgba(0,0,0,0.4);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
     opacity: 1;
   }
 }
 
-@keyframes animationCircle {
+@keyframes shadowSpawn {
   from, 10%, to {
     box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
   }
 
   70% {
-    box-shadow: 0px 20px 50px rgba(0,0,0,0.4);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
     opacity: 1;
   }
 }
@@ -42,8 +46,8 @@ body{
   -webkit-animation-duration: 4s;
   animation-duration: 4s;
 
-  -webkit-animation-name: animationCircle;
-  animation-name: animationCircle;
+  -webkit-animation-name: shadowSpawn;
+  animation-name: shadowSpawn;
 
   -webkit-animation-timing-function: cubic-bezier(0.300, 0.610, 0.355, 1.000);
   animation-timing-function: cubic-bezier(0.300, 0.610, 0.355, 1.000);
@@ -56,6 +60,7 @@ body{
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 40px;
   color: #414141;
+  opacity: 0;
 
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -73,7 +78,6 @@ body{
   }
 }
 
-
 @keyframes hue {
   0% {
       -webkit-filter: hue-rotate(0deg);
@@ -88,14 +92,42 @@ body{
   box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
   width 100%;
   padding: 20px;
+
+  -webkit-animation: shadowSpawn 2s;
+  animation: shadowSpawn 2s;
+
+}
+
+#menu_title{
+
   color: #fafafa;
   text-align: center;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 30px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 
-  -webkit-animation: hue 60s infinite linear;
+  -webkit-animation: hue 40s infinite linear;
+  animation: hue 40s infinite linear;
   background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+}
+
+#container {
+  padding: 20%;
+}
+
+footer{
+  background: #414141;
+  background: -webkit-linear-gradient(bottom,#313131,#414141);
+  background: linear-gradient(to top,#313131,#414141);
+  height: 200px;
+}
+
+#owner{
+
+  color: #a0a0a0;
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 
 }

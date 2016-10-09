@@ -1,5 +1,5 @@
 import React from 'react';
-import Bar from './Bar';
+import Home from './Home';
 import Init from './Init';
 
 class Papp extends React.Component {
