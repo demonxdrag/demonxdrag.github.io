@@ -90,7 +90,7 @@ webpackJsonp_name_([0],{
 				}
 	
 				if (this.state.bar) {
-					return _react2.default.createElement(Bar, null);
+					return _react2.default.createElement(_Home2.default, null);
 				}
 			}
 		}]);

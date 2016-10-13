@@ -20,7 +20,7 @@ class Papp extends React.Component {
 		}
 
 		if(this.state.bar){
-			return	<Bar/>;
+			return	<Home/>;
 		}
 	}
 }
