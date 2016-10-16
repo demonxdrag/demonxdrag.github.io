@@ -5,7 +5,7 @@ import Init from './Init';
 class Papp extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {circle: true, bar: false};
+		this.state = {init: true};
 	}
 	setStore(store){
 		this.setState(store);
@@ -15,12 +15,8 @@ class Papp extends React.Component {
 		this.setState(mergedState);
 	}
 	render() {
-		if(this.state.circle){
-			return <Init/>;
-		}
-
-		if(this.state.bar){
-			return	<Bar/>;
+		if(this.state.init){
+			/*return <Init/>;*/
 		}
 	}
 }

@@ -47,7 +47,7 @@ webpackJsonp_name_([0],{
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _Init = __webpack_require__(174);
+	var _Init = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Init\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _Init2 = _interopRequireDefault(_Init);
 	
@@ -67,7 +67,7 @@ webpackJsonp_name_([0],{
 	
 			var _this = _possibleConstructorReturn(this, (Papp.__proto__ || Object.getPrototypeOf(Papp)).call(this, props));
 	
-			_this.state = { circle: true, bar: false };
+			_this.state = { init: true };
 			return _this;
 		}
 	
@@ -85,12 +85,8 @@ webpackJsonp_name_([0],{
 		}, {
 			key: 'render',
 			value: function render() {
-				if (this.state.circle) {
-					return _react2.default.createElement(_Init2.default, null);
-				}
-	
-				if (this.state.bar) {
-					return _react2.default.createElement(Bar, null);
+				if (this.state.init) {
+					/*return <Init/>;*/
 				}
 			}
 		}]);
@@ -153,70 +149,6 @@ webpackJsonp_name_([0],{
 	}(_react2.default.Component);
 	
 	exports.default = Home;
-
-/***/ },
-
-/***/ 174:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Init = function (_React$Component) {
-		_inherits(Init, _React$Component);
-	
-		function Init() {
-			_classCallCheck(this, Init);
-	
-			return _possibleConstructorReturn(this, (Init.__proto__ || Object.getPrototypeOf(Init)).apply(this, arguments));
-		}
-	
-		_createClass(Init, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ id: 'home_circle' },
-					_react2.default.createElement(
-						'p',
-						null,
-						'Adrian',
-						_react2.default.createElement('br', null),
-						'Pappalardo'
-					)
-				);
-			}
-		}, {
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-				var circle = document.querySelectorAll('#home_circle')[0];
-				circle.childNodes[0].className = "animated fadeIn";
-				//setTimeout(() => this.showThing({circle:false, bar:true}), 1500);
-			}
-		}]);
-	
-		return Init;
-	}(_react2.default.Component);
-	
-	exports.default = Init;
 
 /***/ }
 
