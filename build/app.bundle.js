@@ -85,8 +85,17 @@ webpackJsonp_name_([0],{
 		}, {
 			key: 'render',
 			value: function render() {
+<<<<<<< HEAD
 				if (this.state.init) {
 					/*return <Init/>;*/
+=======
+				if (this.state.circle) {
+					return _react2.default.createElement(_Init2.default, null);
+				}
+	
+				if (this.state.bar) {
+					return _react2.default.createElement(_Home2.default, null);
+>>>>>>> 093cb3f7cd77fd5c0edb0755ad2d0eb675afe9ea
 				}
 			}
 		}]);
