@@ -131,28 +131,29 @@ webpackJsonp_name_([0],{
 		_createClass(Init, [{
 			key: "render",
 			value: function render() {
-				var projectName = ["Photorealistic Drum", "Tesla Model S", "Ford GT 2017", "Piano Concept", "Black Sabr Branding", "VolksWagen Scirocco", "VolksWagen Beetle", "Seat Ibiza Contest Prototype", "Logo Showreel", "Blitzkrieg Breakfast Steam Profiles", "Videogame Assets"];
+				var projectName = ["Photorealistic_Drum", "Tesla_Model_S", "Ford_GT_2017", "Piano_Concept", "Black_Sabr_Branding", "VolksWagen_Scirocco", "VolksWagen_Beetle", "Seat_Ibiza_Contest_Prototype", "Logo_Showreel", "Blitzkrieg_Breakfast_Steam_Profiles", "Videogame_Assets"];
 	
-				var final = {};
-				for (var i = 0; i < projectName.length; i++) {
-					var img = "img/" + projectName[i] + "/Cover.jpg";
-					final += _react2.default.createElement(
-						"div",
-						{ className: "card" },
-						_react2.default.createElement(
+				var img = void 0;
+				return _react2.default.createElement(
+					"div",
+					null,
+					projectName.map(function (proj) {
+						return _react2.default.createElement(
 							"div",
-							{ className: "card-image" },
-							_react2.default.createElement("img", { src: img, alt: projectName[i] }),
+							{ className: "card", key: proj },
 							_react2.default.createElement(
-								"span",
-								{ className: "card-title" },
-								projectName[i]
+								"div",
+								{ className: "card-image" },
+								_react2.default.createElement("img", { src: "img/" + decodeURIComponent(proj) + "/Cover.png", alt: proj }),
+								_react2.default.createElement(
+									"span",
+									{ className: "card-title" },
+									proj
+								)
 							)
-						)
-					);
-				}
-				console.log(final);
-				return final;
+						);
+					})
+				);
 			}
 		}, {
 			key: "componentDidMount",

@@ -3,33 +3,29 @@ import React from 'react';
 class Init extends React.Component {
 	render() {
 		let projectName = [
-			"Photorealistic Drum",
-			"Tesla Model S",
-			"Ford GT 2017",
-			"Piano Concept",
-			"Black Sabr Branding",
-			"VolksWagen Scirocco",
-			"VolksWagen Beetle",
-			"Seat Ibiza Contest Prototype",
-			"Logo Showreel",
-			"Blitzkrieg Breakfast Steam Profiles",
-			"Videogame Assets"
+			"Photorealistic_Drum",
+			"Tesla_Model_S",
+			"Ford_GT_2017",
+			"Piano_Concept",
+			"Black_Sabr_Branding",
+			"VolksWagen_Scirocco",
+			"VolksWagen_Beetle",
+			"Seat_Ibiza_Contest_Prototype",
+			"Logo_Showreel",
+			"Blitzkrieg_Breakfast_Steam_Profiles",
+			"Videogame_Assets"
 		];
 
-		let final = {};
-		for (let i = 0; i < projectName.length; i++) {
-			let img = "img/" + projectName[i] + "/Cover.jpg";
-			final += (
-				<div className="card">
+		let img;
+		return <div>{projectName.map(proj => 
+			<div className="card" key={proj}>
 					<div className="card-image">
-						<img src={img} alt={projectName[i]}/>
-						<span className="card-title">{projectName[i]}</span>
+						<img src={"img/" + decodeURIComponent(proj) + "/Cover.png"} alt={proj}/>
+						<span className="card-title">{proj}</span>
 					</div>
 				</div>
-			);
-		}
-		console.log(final);
-		return final;
+		)}</div>;
+
 	}
 	componentDidMount(){
 		/*
