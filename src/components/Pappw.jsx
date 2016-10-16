@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './Home';
+// import Home from './Home';
 import Init from './Init';
 
 class Papp extends React.Component {
@@ -16,7 +16,7 @@ class Papp extends React.Component {
 	}
 	render() {
 		if(this.state.init){
-			/*return <Init/>;*/
+			return <Init/>;
 		}
 	}
 }

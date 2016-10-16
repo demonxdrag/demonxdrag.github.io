@@ -43,11 +43,7 @@ webpackJsonp_name_([0],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Home = __webpack_require__(173);
-	
-	var _Home2 = _interopRequireDefault(_Home);
-	
-	var _Init = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Init\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Init = __webpack_require__(173);
 	
 	var _Init2 = _interopRequireDefault(_Init);
 	
@@ -58,6 +54,8 @@ webpackJsonp_name_([0],{
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	// import Home from './Home';
+	
 	
 	var Papp = function (_React$Component) {
 		_inherits(Papp, _React$Component);
@@ -85,17 +83,8 @@ webpackJsonp_name_([0],{
 		}, {
 			key: 'render',
 			value: function render() {
-<<<<<<< HEAD
 				if (this.state.init) {
-					/*return <Init/>;*/
-=======
-				if (this.state.circle) {
 					return _react2.default.createElement(_Init2.default, null);
-				}
-	
-				if (this.state.bar) {
-					return _react2.default.createElement(_Home2.default, null);
->>>>>>> 093cb3f7cd77fd5c0edb0755ad2d0eb675afe9ea
 				}
 			}
 		}]);
@@ -130,34 +119,56 @@ webpackJsonp_name_([0],{
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Home = function (_React$Component) {
-		_inherits(Home, _React$Component);
+	var Init = function (_React$Component) {
+		_inherits(Init, _React$Component);
 	
-		function Home() {
-			_classCallCheck(this, Home);
+		function Init() {
+			_classCallCheck(this, Init);
 	
-			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (Init.__proto__ || Object.getPrototypeOf(Init)).apply(this, arguments));
 		}
 	
-		_createClass(Home, [{
+		_createClass(Init, [{
 			key: "render",
 			value: function render() {
-				return _react2.default.createElement(
-					"div",
-					{ id: "menu_holder" },
-					_react2.default.createElement(
+				var projectName = ["Photorealistic Drum", "Tesla Model S", "Ford GT 2017", "Piano Concept", "Black Sabr Branding", "VolksWagen Scirocco", "VolksWagen Beetle", "Seat Ibiza Contest Prototype", "Logo Showreel", "Blitzkrieg Breakfast Steam Profiles", "Videogame Assets"];
+	
+				var final = {};
+				for (var i = 0; i < projectName.length; i++) {
+					var img = "img/" + projectName[i] + "/Cover.jpg";
+					final += _react2.default.createElement(
 						"div",
-						{ id: "menu_title" },
-						"Portfolio"
-					)
-				);
+						{ className: "card" },
+						_react2.default.createElement(
+							"div",
+							{ className: "card-image" },
+							_react2.default.createElement("img", { src: img, alt: projectName[i] }),
+							_react2.default.createElement(
+								"span",
+								{ className: "card-title" },
+								projectName[i]
+							)
+						)
+					);
+				}
+				console.log(final);
+				return final;
+			}
+		}, {
+			key: "componentDidMount",
+			value: function componentDidMount() {
+				/*
+	   let animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+	   let circle = document.querySelectorAll('#home_circle')[0];
+	   circle.childNodes[0].className = "animated fadeIn";
+	   */
 			}
 		}]);
 	
-		return Home;
+		return Init;
 	}(_react2.default.Component);
 	
-	exports.default = Home;
+	exports.default = Init;
 
 /***/ }
 

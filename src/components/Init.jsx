@@ -17,17 +17,18 @@ class Init extends React.Component {
 		];
 
 		let final = {};
-		for (i = 0; i < projectName.length; i++) {
-			let img = "img/" + {projectName[i]} + "/Cover.jpg";
+		for (let i = 0; i < projectName.length; i++) {
+			let img = "img/" + projectName[i] + "/Cover.jpg";
 			final += (
-				<div class="card">
-		      <div class="card-image">
-		        <img src={img} alt=projectName[i]>
-		        <span class="card-title">{projectName[i]}</span>
-		      </div>
-		    </div>
+				<div className="card">
+					<div className="card-image">
+						<img src={img} alt={projectName[i]}/>
+						<span className="card-title">{projectName[i]}</span>
+					</div>
+				</div>
 			);
-		};
+		}
+		console.log(final);
 		return final;
 	}
 	componentDidMount(){
