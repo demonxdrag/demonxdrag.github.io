@@ -144,7 +144,7 @@ webpackJsonp_name_([0],{
 							_react2.default.createElement(
 								"div",
 								{ className: "card-image" },
-								_react2.default.createElement("img", { src: "img/" + decodeURIComponent(proj) + "/Cover.png", alt: proj }),
+								_react2.default.createElement("img", { src: "img/" + decodeURIComponent(proj) + "/Cover.jpg", alt: proj }),
 								_react2.default.createElement(
 									"span",
 									{ className: "card-title" },

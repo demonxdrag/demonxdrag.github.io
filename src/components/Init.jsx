@@ -17,10 +17,10 @@ class Init extends React.Component {
 		];
 
 		let img;
-		return <div>{projectName.map(proj => 
+		return <div>{projectName.map(proj =>
 			<div className="card" key={proj}>
 					<div className="card-image">
-						<img src={"img/" + decodeURIComponent(proj) + "/Cover.png"} alt={proj}/>
+						<img src={"img/" + decodeURIComponent(proj) + "/Cover.jpg"} alt={proj}/>
 						<span className="card-title">{proj}</span>
 					</div>
 				</div>
